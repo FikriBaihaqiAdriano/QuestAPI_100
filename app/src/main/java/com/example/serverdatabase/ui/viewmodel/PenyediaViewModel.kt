@@ -21,6 +21,11 @@ object PenyediaViewModel {
                 MahasiswaApplications().MahasiswaContainer.mahasiswaRepository
             )
         }
+        initializer {
+            DetailViewModel(
+                MahasiswaApplications().MahasiswaContainer.mahasiswaRepository
+            )
+        }
     }
 }
 
