@@ -3,6 +3,7 @@ package com.example.serverdatabase.ui.viewmodel
 import android.os.Build
 import androidx.annotation.RequiresExtension
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
@@ -23,6 +24,12 @@ object PenyediaViewModel {
         }
         initializer {
             DetailViewModel(
+                MahasiswaApplications().MahasiswaContainer.mahasiswaRepository
+            )
+        }
+        initializer {
+            EditViewModel(
+                this.createSavedStateHandle(),
                 MahasiswaApplications().MahasiswaContainer.mahasiswaRepository
             )
         }
